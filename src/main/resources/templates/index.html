@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<h2>Table of All Customers</h2>
+    <table class="table">
+        <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Title</th>
+            <th scope="col">Last Name</th>
+            <th scope="col">First Name</th>
+            <th scope="col">Street Address</th>
+            <th scope="col">CityID</th>
+            <th scope="col">StateID</th>
+            <th scope="col">ZipID</th>
+            <th scope="col">Email Address</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="a : ${customers}">
+            <!--<th scope="row"></th>-->
+            <td th:text="${a.id}"></td>
+            <td th:text="${a.title}"></td>
+            <td th:text="${a.lastName}"></td>
+            <td th:text="${a.firstName}"></td>
+            <td th:text="${a.streetAddress}"></td>
+            <td th:text="${a.cityid}"></td>
+            <td th:text="${a.stateid}"></td>
+            <td th:text="${a.zipid}"></td>
+            <td th:text="${a.emailAddress}"></td>
+        </tr>
+
+        </tbody>
+    </table>
+
+</div>
+</body>
+</html>

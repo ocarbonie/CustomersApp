@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>Results</h2>
+<p>Here are the customers with last name: [[${lastName}]]</p>
+<div th:each="result:${customers}">
+<p th:text="${result.lastName}"/>
+
+</body>
+</html>
